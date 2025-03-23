@@ -13,8 +13,18 @@ TerraformでECRを作成しイメージのビルドとプッシュまで行う
 - `go`が実行できること
   - `go`を使った簡単なサンプルプログラムをDockerイメージに含めるため
 
+## 初期設定
+1. `terraform init`を実行する
+  - `tfstate`ファイルをS3に保存することを想定している。`terraform init`実行時にオプションでS3バケットやキー名を指定すること。
+
 ## 操作手順
 1. `cd tool/terraform`
 1. `chmod +x deploy.sh`
 1. `./deploy.sh`: TerraformのVariableに環境変数経由で値を渡すため、`source`コマンドは使わない方がより安全。
   - `aws_region`はデフォルト`ap-northeast-1`のため、変更したい場合は何かしらの方法で上書きすること。
+
+## License
+MIT
+
+## Author
+tenkoh
