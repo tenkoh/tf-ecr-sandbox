@@ -17,3 +17,4 @@ TerraformでECRを作成しイメージのビルドとプッシュまで行う
 1. `cd tool/terraform`
 1. `chmod +x deploy.sh`
 1. `./deploy.sh`: TerraformのVariableに環境変数経由で値を渡すため、`source`コマンドは使わない方がより安全。
+  - `aws_region`はデフォルト`ap-northeast-1`のため、変更したい場合は何かしらの方法で上書きすること。
